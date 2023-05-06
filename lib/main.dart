@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:card_snap_ar_client_side/login_screen.dart';
+import 'package:card_snap_ar_client_side/views/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+// void main() async {
+//   // Initialize Firebase
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+
+//   // Run the app inside a try-catch block
+//   try {
+//     runApp(const MyApp());
+//   } catch (e) {
+//     print('Error starting app: $e');
+//   }
+// }
 
 void main() {
-  runApp(const MyApp());
-}
 
+  // Run the app inside a try-catch block
+  try {
+    runApp(const MyApp());
+  } catch (e) {
+    print('Error starting app: $e');
+  }
+}
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -18,7 +37,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const LaunchScreen(),
       routes: {
-        '/login': (context) => const LoginScreen(),
+        '/login': (context) => LoginScreen(),
         // Add more routes as needed
       },
     );
